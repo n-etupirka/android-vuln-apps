@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Access to private components</string>
+    <string name="privateactivity_message">This is PrivateActivity.</string>
 </resources>
