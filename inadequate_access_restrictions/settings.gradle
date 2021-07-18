@@ -1,0 +1,2 @@
+rootProject.name = "Inadequate access restrictions"
+include ':app'
