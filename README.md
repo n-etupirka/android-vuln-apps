@@ -26,3 +26,8 @@ Sample collection of vulnerable Android applications
 - https://www.m3tech.blog/entry/android-webview-intent-scheme
 - https://medium.com/@dPhoeniixx/tiktok-for-android-1-click-rce-240266e78105
 - https://www.mbsd.jp/Whitepaper/IntentScheme.pdf
+
+## Steal tokens
+### Overview
+
+// TODO
