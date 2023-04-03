@@ -17,23 +17,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        BottomNavigationItemView homeButtom = findViewById(R.id.navigation_home);
-        BottomNavigationItemView notificationsButtom = findViewById(R.id.navigation_notifications);
-        BottomNavigationItemView settingsButtom = findViewById(R.id.navigation_settings);
+        BottomNavigationItemView homeButton = findViewById(R.id.navigation_home);
+        BottomNavigationItemView notificationsButton = findViewById(R.id.navigation_notifications);
+        BottomNavigationItemView settingsButton = findViewById(R.id.navigation_settings);
 
         Intent intent = new Intent(getApplication(), TrustedWebViewActivity.class);
 
-        homeButtom.setOnClickListener(v -> {
+        homeButton.setOnClickListener(v -> {
             Log.d(TAG, "onCreate: Click home");
         });
 
-        settingsButtom.setOnClickListener(v -> {
+        settingsButton.setOnClickListener(v -> {
             intent.putExtra("EXTRA_URL", getString(R.string.url_settings));
             startActivity(intent);
             Log.d(TAG, "onCreate: Click settings");
         });
 
-        notificationsButtom.setOnClickListener(v -> {
+        notificationsButton.setOnClickListener(v -> {
             intent.putExtra("EXTRA_URL", getString(R.string.url_notifications));
             startActivity(intent);
             Log.d(TAG, "onCreate: Click notifications");
