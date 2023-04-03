@@ -1,7 +1,7 @@
 # vuln-apps
 Sample collection of vulnerable Android applications
 
-## Inadequate access restrictions
+## 0x01 Inadequate access restrictions
 ### Overview
 ディープリンクを使用して指定された任意のURLにアクセスしてしまう脆弱性。外部から受け取ったURLにWebViewでアクセスする機能があり、適切にアクセス制御が行われていない場合に作り込まれる。
 
@@ -13,7 +13,7 @@ Sample collection of vulnerable Android applications
 ### Reference
 - https://www.lac.co.jp/lacwatch/people/20210625_002645.html
 
-## Access to private components
+## 0x02 Access to private components
 ### Overview
 外部から非公開のコンポーネントへアクセス可能となる脆弱性。WebViewによるIntentスキームのサポートを**shouldOverrideUrlLoading**メソッドによって独自実装しており、その実装に不備がある場合に作り込まれる。
 
@@ -26,3 +26,8 @@ Sample collection of vulnerable Android applications
 - https://www.m3tech.blog/entry/android-webview-intent-scheme
 - https://medium.com/@dPhoeniixx/tiktok-for-android-1-click-rce-240266e78105
 - https://www.mbsd.jp/Whitepaper/IntentScheme.pdf
+
+## 0x03 Steal tokens
+### Overview
+
+// TODO
