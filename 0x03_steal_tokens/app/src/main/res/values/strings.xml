@@ -10,7 +10,7 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_settings">Settings</string>
     <!-- Strings related to url -->
-    <string name="url_login">http://192.168.1.50/login</string>
-    <string name="url_settings">http://192.168.1.50/settings</string>
-    <string name="url_notifications">http://192.168.1.50/notifications</string>
+    <string name="url_login">http://192.168.1.50/login.php</string>
+    <string name="url_settings">http://192.168.1.50/settings.php</string>
+    <string name="url_notifications">http://192.168.1.50/notifications.php</string>
 </resources>
