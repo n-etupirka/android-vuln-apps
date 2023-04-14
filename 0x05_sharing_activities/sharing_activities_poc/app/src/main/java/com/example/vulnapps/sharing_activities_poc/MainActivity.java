@@ -15,6 +15,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -56,7 +57,12 @@ public class MainActivity extends AppCompatActivity {
         read_secret.setOnClickListener(view -> {
             try {
                 String text = "";
-                FileInputStream fileInputStream = new FileInputStream("/storage/emulated/0/Android/data/com.example.vulnapps.sharing_activities/cache/temp");
+                String path = "/storage/emulated/0/Android/data/com.example.vulnapps.sharing_activities/cache/temp";
+                if (!(new File(path).exists())) {
+                    Toast.makeText(this, "File not Found.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                FileInputStream fileInputStream = new FileInputStream(path);
                 BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream, StandardCharsets.UTF_8));
                 String lineBuffer;
                 while (true){
