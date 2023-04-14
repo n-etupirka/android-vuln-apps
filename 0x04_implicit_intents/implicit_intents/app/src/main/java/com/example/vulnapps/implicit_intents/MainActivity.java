@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -33,12 +34,15 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences.Editor editor = secrets.edit();
             editor.putString("AccessToken", "044b991bf5a551d3c188158f95fc2107");
             editor.apply();
+            Log.d(TAG, "onCreate: Created secrets.xml.");
+            Toast.makeText(this, "Created secrets.xml.", Toast.LENGTH_SHORT).show();
         });
 
         send_implicit_intent.setOnClickListener(view -> {
             Intent intent = new Intent(Intent.ACTION_PICK);
             intent.setType("image/*");
             startActivityForResult(intent, REQUEST_SELECT_CONTACT);
+            Toast.makeText(this, "Sent implicit intent.", Toast.LENGTH_SHORT).show();
         });
     }
 
@@ -50,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
         }
         Uri uri = data.getData();
         Log.d(TAG, "onActivityResult: uri = " + uri);
+        if (!(new File(uri.getPath()).exists())) {
+            Toast.makeText(this, "File not Found.", Toast.LENGTH_SHORT).show();
+            return;
+        }
         File cacheFile = new File(getExternalCacheDir(), "temp");
         copyCache(uri, cacheFile);
     }
@@ -71,8 +79,10 @@ public class MainActivity extends AppCompatActivity {
 
             inputStream.close();
             outputStream.close();
+
+            Toast.makeText(this, "Cached " + uri + ".", Toast.LENGTH_SHORT).show();
         } catch (IOException e) {
-            Log.e(TAG, "copy: ", e);
+            e.printStackTrace();
         }
     }
 }
