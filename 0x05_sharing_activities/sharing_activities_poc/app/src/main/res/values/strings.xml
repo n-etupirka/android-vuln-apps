@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sharing activities PoC</string>
+    <string name="exploit">Exploit</string>
+    <string name="read_secret">Read secret</string>
+</resources>
