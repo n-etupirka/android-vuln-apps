@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Exported providers</string>
+    <string name="create_secret_data">Create secret data</string>
+</resources>
