@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Implicit intents</string>
+    <string name="button">Send implicit intent</string>
+    <string name="create_secret_data">Create secret data</string>
+</resources>

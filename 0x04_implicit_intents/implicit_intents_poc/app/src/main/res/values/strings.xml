@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Implicit intents PoC</string>
+    <string name="read_secret">Read secret</string>
+</resources>

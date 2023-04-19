@@ -31,3 +31,8 @@ Androidアプリの脆弱性を作り込んだサンプルアプリおよびPoC�
 ### 概要
 
 // TODO
+
+## 0x04 Implicit intents
+### 概要
+
+// TODO
